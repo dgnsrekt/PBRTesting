@@ -90,7 +90,3 @@ ENV/
 .ropeproject
 *.npy
 *.pkl
-
-# dgnsrekt custom
-pytest.ini
-temp-plot.html
