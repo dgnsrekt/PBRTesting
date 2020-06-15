@@ -201,6 +201,14 @@ six = "*"
 
 [[package]]
 category = "main"
+description = "Mimesis: fake data generator."
+name = "mimesis"
+optional = false
+python-versions = "*"
+version = "4.0.0"
+
+[[package]]
+category = "main"
 description = "More routines for operating on iterables, beyond itertools"
 name = "more-itertools"
 optional = false
@@ -371,6 +379,14 @@ colorama = ">=0.3.3"
 docopt = ">=0.4.0"
 pytest = ">=2.6.4"
 watchdog = ">=0.6.0"
+
+[[package]]
+category = "main"
+description = "Strict separation of settings from code."
+name = "python-decouple"
+optional = false
+python-versions = "*"
+version = "3.3"
 
 [[package]]
 category = "main"
@@ -553,7 +569,7 @@ dev = ["pytest", "pytest-timeout", "coverage", "tox", "sphinx", "pallets-sphinx-
 watchdog = ["watchdog"]
 
 [metadata]
-content-hash = "464128a77d8529f8cd84c2adc4f1cab5acec8452dea71a9cce399154924ea6bf"
+content-hash = "ab8f63a14ed1fa40773b38a4ef78e5e649ee8b25f8dd249269e0268fe6c3a5d1"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -633,6 +649,10 @@ jsonschema = [
 junit-xml = [
     {file = "junit_xml-1.9-py2.py3-none-any.whl", hash = "sha256:ec5ca1a55aefdd76d28fcc0b135251d156c7106fa979686a4b48d62b761b4732"},
 ]
+mimesis = [
+    {file = "mimesis-4.0.0-py3-none-any.whl", hash = "sha256:9a4f001f95b9cceb419266e28b422e67fae71995e16a6ab641ff14dd139f5fa3"},
+    {file = "mimesis-4.0.0.tar.gz", hash = "sha256:d59ca48d4118d391704a525cef4e33fa219f3d9c4f9a95b7ec2a0e0c88e048a4"},
+]
 more-itertools = [
     {file = "more-itertools-8.4.0.tar.gz", hash = "sha256:68c70cc7167bdf5c7c9d8f6954a7837089c6a36bf565383919bb595efb8a17e5"},
     {file = "more_itertools-8.4.0-py3-none-any.whl", hash = "sha256:b78134b2063dd214000685165d81c154522c3ee0a1c0d4d113c80361c234c5a2"},
@@ -704,6 +724,9 @@ pytest-subtests = [
 ]
 pytest-watch = [
     {file = "pytest-watch-4.2.0.tar.gz", hash = "sha256:06136f03d5b361718b8d0d234042f7b2f203910d8568f63df2f866b547b3d4b9"},
+]
+python-decouple = [
+    {file = "python-decouple-3.3.tar.gz", hash = "sha256:55c546b85b0c47a15a47a4312d451a437f7344a9be3e001660bccd93b637de95"},
 ]
 pyyaml = [
     {file = "PyYAML-5.3.1-cp27-cp27m-win32.whl", hash = "sha256:74809a57b329d6cc0fdccee6318f44b9b8649961fa73144a98735b0aaf029f1f"},

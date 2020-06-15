@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pbrtesting.schema import Item
+from decouple import config
 import uvicorn
 import random
 
@@ -8,34 +9,30 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
+    """Returns Hello World"""
     return {"Hello": "World"}
 
 
-@app.get("echo/{name}")
+@app.get("/echo/{name}")
 def echo(name: str):
-    return {"name": name}
+    """Echos Name"""
+    return {"name": name.title()}
 
 
-# class Item(pydantic.BaseModel):
-#     name: str
-#     price: float
-#     is_offer: bool = None
-#
-@app.get("item/{item_name}")
-def echo(item_name: str):
-    name = item_name
-    price = float(random.randint())
+@app.get("/item/{item_name}")
+def get_item(item_name: str):
+    """Gets Item by item_name"""
+    name = item_name.title()
+    price = float(random.randint(0, 4096))
+    return Item(name=name, price=price)
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: str = None):
-    return {"item_id": item_id, "q": q}
-
-
-@app.put("/items/{item_id}")
-def update_item(item_id: int, item: Item):
-    return {"item_name": item.name, "item_id": item_id}
+@app.post("/item/{item_name}")
+def add_item(item_name: str, price: int):
+    """Adds Item"""
+    name = item_name.title()
+    return Item(name=name, price=price)
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", port=5000, reload=True)
+    uvicorn.run("main:app", port=config("PORT", cast=int), reload=True)
