@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "PBRTesting"
+version = "0.1.0"
+description = "Parameterized Based Regression Testing"
+authors = ["dgnsrekt <dgnsrekt@pm.me>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+hypothesis = "^5.16.1"
+pytest-regressions = "^2.0.1"
+pytest-rerunfailures = "^9.0"
+pytest-watch = "^4.2.0"
+black = "^19.10b0"
+schemathesis = "^1.8.0"
+requests = "^2.23.0"
+uvicorn = "^0.11.5"
+fastapi = "^0.58.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
